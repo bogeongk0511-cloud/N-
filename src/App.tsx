@@ -224,20 +224,20 @@ export default function App() {
               <Sparkles className="w-4 h-4" />
               <span>나만의 맞춤형 N잡 찾기</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tight mb-8 leading-[1.1]">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold tracking-tight mb-6 md:mb-8 leading-[1.1]">
               당신의 경험은 <br />
               <span className="text-orange-500 italic">돈이 될 수 있습니다.</span>
             </h1>
-            <p className="text-xl text-gray-500 mb-12 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-500 mb-10 md:mb-12 max-w-2xl mx-auto leading-relaxed">
               7가지 질문과 당신의 소중한 경험 5가지를 분석하여, 
               가장 확실하게 수익을 낼 수 있는 부업 로드맵을 설계해 드립니다.
             </p>
             <button 
               onClick={handleStart}
-              className="group relative inline-flex items-center gap-3 px-10 py-5 bg-[#1A1A1A] text-white rounded-2xl font-bold text-xl transition-all hover:bg-orange-500 hover:scale-105 active:scale-95 shadow-2xl shadow-black/10"
+              className="group relative inline-flex items-center gap-3 px-8 md:px-10 py-4 md:py-5 bg-[#1A1A1A] text-white rounded-2xl font-bold text-lg md:text-xl transition-all hover:bg-orange-500 hover:scale-105 active:scale-95 shadow-2xl shadow-black/10"
             >
               무료로 내 부업 성향 검사하기
-              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" />
             </button>
             
             <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
@@ -382,10 +382,10 @@ export default function App() {
             animate={{ opacity: 1 }}
             className="max-w-5xl mx-auto px-6 py-20"
           >
-            <div className="mb-12 text-center">
+            <div className="mb-8 md:mb-12 text-center">
               <div className="inline-block px-4 py-1.5 rounded-full bg-orange-50 text-orange-600 font-bold text-xs uppercase tracking-widest mb-4">Analysis Complete</div>
-              <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">당신의 부업 테마는 <br /><span className="text-orange-500">[{result.theme}]</span> 입니다.</h2>
-              <p className="text-gray-500 max-w-2xl mx-auto text-lg">분석 결과를 바탕으로 가장 추천하는 3가지 부업과 예상 수익 로드맵입니다.</p>
+              <h2 className="text-3xl sm:text-4xl md:text-6xl font-display font-bold mb-4 md:mb-6">당신의 부업 테마는 <br /><span className="text-orange-500">[{result.theme}]</span> 입니다.</h2>
+              <p className="text-gray-500 max-w-2xl mx-auto text-base md:text-lg">분석 결과를 바탕으로 가장 추천하는 3가지 부업과 예상 수익 로드맵입니다.</p>
             </div>
 
             <div className="grid grid-cols-1 gap-12 mb-24">
@@ -398,27 +398,27 @@ export default function App() {
                   transition={{ delay: i * 0.1 }}
                   className="bg-white rounded-[2.5rem] p-8 md:p-12 border border-gray-100 shadow-xl shadow-gray-200/50"
                 >
-                  <div className="flex flex-col md:flex-row gap-12">
+                  <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-6">
-                        <div className="w-10 h-10 rounded-xl bg-orange-500 flex items-center justify-center text-white font-bold text-lg">0{i+1}</div>
-                        <h3 className="text-3xl font-bold">{rec.title}</h3>
+                        <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-orange-500 flex items-center justify-center text-white font-bold text-base md:text-lg shrink-0">0{i+1}</div>
+                        <h3 className="text-2xl md:text-3xl font-bold">{rec.title}</h3>
                       </div>
                       <div className="space-y-6">
                         <div>
-                          <h4 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-3 flex items-center gap-2">
+                          <h4 className="text-xs md:text-sm font-bold text-gray-400 uppercase tracking-widest mb-3 flex items-center gap-2">
                             <CheckCircle2 className="w-4 h-4 text-orange-500" /> 선정 이유
                           </h4>
-                          <p className="text-gray-600 leading-relaxed text-lg">{rec.reason}</p>
+                          <p className="text-gray-600 leading-relaxed text-base md:text-lg">{rec.reason}</p>
                         </div>
                       </div>
                     </div>
                     
-                    <div className="flex-1 min-h-[300px]">
-                      <h4 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-6 flex items-center gap-2">
+                    <div className="flex-1 min-h-[250px] md:min-h-[300px]">
+                      <h4 className="text-xs md:text-sm font-bold text-gray-400 uppercase tracking-widest mb-6 flex items-center gap-2">
                         <TrendingUp className="w-4 h-4 text-orange-500" /> 6개월 예상 수익 추이
                       </h4>
-                      <div className="w-full h-[250px]">
+                      <div className="w-full h-[200px] md:h-[250px]">
                         <ResponsiveContainer width="100%" height="100%">
                           <AreaChart data={rec.projections}>
                             <defs>
@@ -464,7 +464,7 @@ export default function App() {
             </div>
 
             {/* CTA Section */}
-            <div className="relative overflow-hidden bg-[#1A1A1A] rounded-[3rem] p-12 md:p-20 text-white text-center">
+            <div className="relative overflow-hidden bg-[#1A1A1A] rounded-[2rem] md:rounded-[3rem] p-8 md:p-20 text-white text-center">
               <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
                 <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-orange-500 rounded-full blur-[120px]" />
                 <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-orange-500 rounded-full blur-[120px]" />
@@ -475,31 +475,31 @@ export default function App() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
               >
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-orange-400 font-bold text-sm mb-8">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-orange-400 font-bold text-xs md:text-sm mb-6 md:mb-8">
                   <Gift className="w-4 h-4" />
                   <span>기간 한정 특별 할인 이벤트</span>
                 </div>
-                <h2 className="text-4xl md:text-7xl font-display font-bold mb-8 leading-tight">
+                <h2 className="text-3xl sm:text-4xl md:text-7xl font-display font-bold mb-6 md:mb-8 leading-tight">
                   나만을 위한 <br />
                   <span className="text-orange-500">1:1 맞춤 상세 보고서</span> 받기
                 </h2>
-                <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+                <p className="text-lg md:text-xl text-gray-400 mb-10 md:mb-12 max-w-2xl mx-auto">
                   (10가지 무자본 부업 & 30가지 0원 홍보 방법 포함)
                 </p>
                 
-                <div className="flex flex-col items-center gap-6 mb-16">
+                <div className="flex flex-col items-center gap-6 mb-12 md:mb-16">
                   <div className="flex items-center gap-4">
-                    <span className="text-2xl text-gray-500 line-through">50,000원</span>
-                    <span className="text-5xl font-black text-white">10,000원</span>
+                    <span className="text-xl md:text-2xl text-gray-500 line-through">50,000원</span>
+                    <span className="text-4xl md:text-5xl font-black text-white">10,000원</span>
                   </div>
                   <a 
                     href="https://www.postype.com/@ideaplan11/request/21812647"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group inline-flex items-center gap-3 px-12 py-6 bg-orange-500 text-white rounded-2xl font-bold text-2xl transition-all hover:bg-orange-600 hover:scale-105 active:scale-95 shadow-2xl shadow-orange-500/20"
+                    className="group inline-flex items-center gap-3 px-8 md:px-12 py-4 md:py-6 bg-orange-500 text-white rounded-2xl font-bold text-xl md:text-2xl transition-all hover:bg-orange-600 hover:scale-105 active:scale-95 shadow-2xl shadow-orange-500/20"
                   >
                     지금 바로 보고서 신청하기
-                    <ArrowRight className="w-7 h-7 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-6 h-6 md:w-7 md:h-7 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </div>
 
