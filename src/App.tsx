@@ -489,8 +489,8 @@ export default function App() {
                 
                 <div className="flex flex-col items-center gap-6 mb-12 md:mb-16">
                   <div className="flex items-center gap-4">
-                    <span className="text-xl md:text-2xl text-gray-500 line-through">50,000원</span>
-                    <span className="text-4xl md:text-5xl font-black text-white">10,000원</span>
+                    <span className="text-xl md:text-2xl text-gray-500 line-through">100,000원</span>
+                    <span className="text-4xl md:text-5xl font-black text-white">30,000원</span>
                   </div>
                   <a 
                     href="https://www.postype.com/@ideaplan11/request/21812647"
