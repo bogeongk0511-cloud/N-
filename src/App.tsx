@@ -475,6 +475,10 @@ export default function App() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
               >
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-orange-400 font-bold text-xs md:text-sm mb-6 md:mb-8">
+                  <Gift className="w-4 h-4" />
+                  <span>기간 한정 특별 할인 이벤트</span>
+                </div>
                 <h2 className="text-3xl sm:text-4xl md:text-7xl font-display font-bold mb-6 md:mb-8 leading-tight">
                   나만을 위한 <br />
                   <span className="text-orange-500">1:1 맞춤 상세 보고서</span> 받기
@@ -484,6 +488,10 @@ export default function App() {
                 </p>
                 
                 <div className="flex flex-col items-center gap-6 mb-12 md:mb-16">
+                  <div className="flex items-center gap-4 mb-6">
+                    <span className="text-xl md:text-2xl text-gray-500 line-through">100,000원</span>
+                    <span className="text-4xl md:text-5xl font-black text-white">22,000원</span>
+                  </div>
                   <a 
                     href="https://www.groble.im/products/yEUZ7K"
                     target="_blank"
